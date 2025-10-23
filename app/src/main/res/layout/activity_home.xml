@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/home_page_background"
+    android:id="@+id/main">
+
+    <!-- Margem opcional para não colar no topo -->
+
+
+    <ImageView
+        android:id="@+id/enzoImage"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/enzo" />
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:text="Bem-vindo!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_below="@id/enzoImage"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- 3. Tabela, posicionada abaixo do texto de boas-vindas -->
+    <TableLayout
+        android:id="@+id/minhaTabela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeText"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="45dp"
+        android:stretchColumns="0,1"> <!-- Faz as colunas se esticarem para preencher o espaço -->
+
+        <!-- Linha do Cabeçalho -->
+        <TableRow
+            android:background="#CCCCCC"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="Nome"
+                android:layout_marginHorizontal="20dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <!-- Linha de Dados 1 -->
+        <TableRow android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/idFalso"
+                android:text="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameTable"
+                android:gravity="end"
+                android:text="" />
+        </TableRow>
+
+
+
+    </TableLayout>
+
+</RelativeLayout>
